@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Details - TN Scheme Recommender</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+	  body {
+	  background: #f4f4f4;
+	  color: #333;
+	  font-family: 'Segoe UI', sans-serif;
+	  margin: 0;
+	  padding: 0;
+	}
+	  form {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 15px;
+	    }
+	    .form-box {
+	  background: white;
+	  padding: 30px;
+	  border-radius: 10px;
+	  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	  max-width: 500px;
+	  width: 100%;
+	}
+	    h2 {
+	  text-align: center;
+	  margin-bottom: 20px;
+	}
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select {
+      padding: 8px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-container {
+      display: flex;
+	  justify-content: center;
+	  align-items: flex-start; 
+	  min-height: 100vh;
+	  padding-top: 60px 0px 60px 0px; /* Adjust this value for more top spacing */
+	  background-color: #f4f4f4;
+    }
+
+    .submit-btn {
+	  padding: 10px 20px;
+	  background-color: #025464;
+	  color: white;
+	  border: none;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  align-self: center;
+	  transition: background-color 0.3s;
+	  font-size: 1em;
+	}
+	
+	.submit-btn:hover {
+	  background-color: #013c4a;
+	}
+    
+ 
+  </style>
+</head>
+<body>
+    
+    <div class="form-container">
+     <div class ="form-box">
+     <h2>Enter Your Details</h2>
+      <form action="FilterServlet" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <label for="occupation">Occupation:</label>
+        <select name="occupation" id="occupation">
+          <option value="any">Any</option>
+          <option value="student">Student</option>
+          <option value="working">Working</option>
+          <option value="homeowner">Home Owner</option>
+          <option value="retired">Retired</option>
+          <option value="farmer">Farmer</option>
+          <option value="entrepreneur">Entrepreneur</option>
+          <option value="quarryworker">Quarry Worker</option>
+          <option value="unorganizedworker">Unorganized Worker</option>
+          <option value="shgworker">SHG Worker</option>
+          <option value="gigworker">Gig Worker</option>
+          <option value="unemployed">Unemployed</option>
+        </select>
+
+        <label for="income">Annual Income:</label>
+        <input type="number" name="income" id="income" required>
+
+        <label for="disability">Are you a person with disability?</label>
+        <select name="disability" id="disability">
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+
+        <label for="tribal">Are you from a tribal community?</label>
+        <select name="tribal" id="tribal">
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+
+        <label for="caste">Caste Category:</label>
+        <select name="caste" id="caste">
+          <option value="general">General</option>
+          <option value="obc">OBC</option>
+          <option value="mbc">MBC</option>
+          <option value="sc">SC</option>
+          <option value="st">ST</option>
+        </select>
+
+        <label for="marital">Marital Status:</label>
+        <select name="marital" id="marital">
+          <option value="single">Single</option>
+          <option value="married">Married</option>
+          <option value="widow">Widow</option>
+        </select>
+
+        <label for="education">Highest Education Level:</label>
+        <select name="education" id="education">
+          <option value="none">None</option>
+          <option value="10th">10th</option>
+          <option value="12th">12th</option>
+          <option value="ug">Undergraduate</option>
+          <option value="pg">Postgraduate</option>
+        </select>
+
+        <button type="submit" class="submit-btn">Get My Schemes</button>
+      </form>
+      </div>
+    </div>
+</body>
+</html>
